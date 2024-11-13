@@ -1,0 +1,21 @@
+Minimum support count: 2.40 (calculated as 40.0% of 6)
+Frequent 1-item sets:
+------------------------------
+CN             : 3
+DBMS           : 4
+OS             : 4
+data_mining    : 5
+oss            : 5
+
+Frequent 2-item sets:
+------------------------------
+CN,oss         : 3 (Support calculated from 3 occurrences)
+DBMS,data_mining: 4 (Support calculated from 4 occurrences)
+DBMS,oss       : 3 (Support calculated from 3 occurrences)
+OS,data_mining : 3 (Support calculated from 3 occurrences)
+OS,oss         : 3 (Support calculated from 3 occurrences)
+data_mining,oss: 4 (Support calculated from 4 occurrences)
+
+Frequent 3-item sets:
+------------------------------
+DBMS,data_mining,oss: 3 (Support calculated from 3 occurrences)

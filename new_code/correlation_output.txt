@@ -1,0 +1,14 @@
+Mean of X: 5.5
+Mean of Y: 62.5
+Covariance: 41.25
+Standard Deviation of X: 3.0276503540974917
+Standard Deviation of Y: 15.138251770487457
+Pearson Correlation Coefficient (r): 0.9000000000000001
+Pearson Correlation Coefficient (r): 0.9000
+Interpretation: Positive correlation
+Mean of X: 5.5
+Mean of Y: 62.5
+m (slope): 5.0
+c (intercept): 35.0
+Linear Regression Equation: Y = 5.00 * X + 35.00
+Predicted Y for X = 15.0: 110.00

@@ -1,0 +1,14 @@
+Company: sony, Product: tv, Count: 15, t-weight: 30.00%, d-weight: 23.08%
+Company: sony, Product: mobile, Count: 25, t-weight: 50.00%, d-weight: 26.32%
+Company: sony, Product: tablet, Count: 10, t-weight: 20.00%, d-weight: 22.22%
+Company: samsung, Product: tv, Count: 30, t-weight: 33.33%, d-weight: 46.15%
+Company: samsung, Product: mobile, Count: 40, t-weight: 44.44%, d-weight: 42.11%
+Company: samsung, Product: tablet, Count: 20, t-weight: 22.22%, d-weight: 44.44%
+Company: lg, Product: tv, Count: 20, t-weight: 30.77%, d-weight: 30.77%
+Company: lg, Product: mobile, Count: 30, t-weight: 46.15%, d-weight: 31.58%
+Company: lg, Product: tablet, Count: 15, t-weight: 23.08%, d-weight: 33.33%
+
+--- Column Totals ---
+Product: tv, Total Count: 65, Column t-weight: 31.71%, d-weight: 100%
+Product: mobile, Total Count: 95, Column t-weight: 46.34%, d-weight: 100%
+Product: tablet, Total Count: 45, Column t-weight: 21.95%, d-weight: 100%
