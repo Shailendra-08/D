@@ -1,7 +1,7 @@
 import csv
 import math
 
-def entropy(data, target_attribute_index, file):
+def entropy(data, target_attribute_index, file=None):
     freq = {}
     for row in data:
         target_value = row[target_attribute_index]
@@ -16,12 +16,11 @@ def entropy(data, target_attribute_index, file):
         prob = count / total
         ent -= prob * math.log2(prob) if prob > 0 else 0  # Avoid log(0) error
     
-    file.write(f"Entropy of the current set: {ent:.4f}\n")
+    if file:
+        file.write(f"Entropy of the current set: {ent:.4f}\n")
     return ent
 
-def info_gain(data, attribute_index, target_attribute_index, file):
-    original_entropy = entropy(data, target_attribute_index, file)
-    
+def info_gain(data, attribute_index, target_attribute_index, original_entropy, file):
     subsets = {}
     for row in data:
         attribute_value = row[attribute_index]
@@ -34,10 +33,11 @@ def info_gain(data, attribute_index, target_attribute_index, file):
     subset_entropy = 0
     for attribute_value, subset in subsets.items():
         prob_subset = len(subset) / total_rows
-        entropy_subset = entropy(subset, target_attribute_index, file)
+        entropy_subset = entropy(subset, target_attribute_index)
         subset_entropy += prob_subset * entropy_subset
     
-    return original_entropy - subset_entropy
+    ig = original_entropy - subset_entropy
+    return ig
 
 def read_csv(filename):
     data = []
@@ -49,13 +49,14 @@ def read_csv(filename):
     return data, headers
 
 def best_split(data, headers, target_attribute_index, file):
+    original_entropy = entropy(data, target_attribute_index, file)
     best_attribute_index = None
     best_info_gain = -1
     
     # Loop through all attributes (excluding the target attribute)
     for i in range(len(headers)):
         if i != target_attribute_index:
-            ig = info_gain(data, i, target_attribute_index, file)
+            ig = info_gain(data, i, target_attribute_index, original_entropy, file)
             file.write(f"Information Gain for {headers[i]}: {ig:.4f}\n")
             
             # Find the attribute with the highest information gain
@@ -69,7 +70,7 @@ def main():
     input_filename = "03_entropy.csv"  
     data, headers = read_csv(input_filename)
 
-    target_attribute_index = len(data[0]) - 1  
+    target_attribute_index = len(data[0]) - 1  # Last column as target attribute
     
     with open("info_output.txt", "w") as file:
         file.write(f"Target attribute: {headers[target_attribute_index]}\n\n")

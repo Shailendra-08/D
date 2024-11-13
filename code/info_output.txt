@@ -1,22 +1,9 @@
 Target attribute: PlayTennis
 
 Entropy of the current set: 0.9403
-Entropy of the current set: 0.9710
-Entropy of the current set: 0.0000
-Entropy of the current set: 0.9710
 Information Gain for Outlook: 0.2467
-Entropy of the current set: 0.9403
-Entropy of the current set: 1.0000
-Entropy of the current set: 0.9183
-Entropy of the current set: 0.8113
 Information Gain for Temperature: 0.0292
-Entropy of the current set: 0.9403
-Entropy of the current set: 0.9852
-Entropy of the current set: 0.5917
 Information Gain for Humidity: 0.1518
-Entropy of the current set: 0.9403
-Entropy of the current set: 0.8113
-Entropy of the current set: 1.0000
 Information Gain for Windy: 0.0481
 
 Best attribute to split on: Outlook
